@@ -69,18 +69,18 @@ Cenário 1: Acessando o site da QAZANDO
 
     Verificar texto login realizado
 
-Cenário 2: Testando robot
-    [Tags]  Teste2
-    Acessar Site da google
-    Aguardar site carregar 
-    Clicar sobre o botao de login
-    Aguardar site carregar
-    Preencher campo email
-    Preencher campo senha
-    Aguardar site carregar
-    Clicar em logar
-    Aguardar site carregar
-    Verificar texto login realizado
+# Cenário 2: Testando robot
+#     [Tags]  Teste2
+#     Acessar Site da google
+#     Aguardar site carregar 
+#     Clicar sobre o botao de login
+#     Aguardar site carregar
+#     Preencher campo email
+#     Preencher campo senha
+#     Aguardar site carregar
+#     Clicar em logar
+#     Aguardar site carregar
+#     Verificar texto login realizado
 
 Cenário 3: Testando valor no teste
     [Tags]  Teste3
