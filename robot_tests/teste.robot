@@ -1,30 +1,29 @@
 ** Settings **
 Library  SeleniumLibrary
 Library  BuiltIn
+Library  FakerLibrary  lacale=pt_Br 
+
 
 ** Variables **
 ${SITE_URL}  https://automationpratice.com.br/ 
 ${SITE_URL_GOOGLE}  https://google.com.br/ 
-${USUARIO_EMAIL}  teste@teste.com
-${USUARIO_SENHA}  Teste123
+${USUARIO_EMAIL}  FakerLibrary.Email
+${USUARIO_SENHA} 
 
 
 ** Keywords **
 Acessar Site da google
-
     Open Browser  ${SITE_URL_GOOGLE}  chrome
-    Esperar Elemento 2
+    Esperar Elemento  2
 
 Acessar Site da qazando
-
     Open Browser  ${SITE_URL}  chrome
-    Esperar Elemento 2
-
+    Esperar Elemento  2
 
 Acessar esse site
     [Arguments]  ${url}
     Open Browser  ${url}  chrome
-    Esperar Elemento 2
+    Esperar Elemento  2
 
 Aguardar Site carregar  
     Sleep  5s
@@ -33,7 +32,7 @@ Clicar sobre o botao de login
     Click Element  xpath://a[@href='/login']
 
 Preencher campo email
-    Input Text  id:user  ${USUARIO_EMAIL}
+    Input Text  id:user  ${USUARIO_EMAIL}  FakerLibrary.Email
 
 Preencher campo senha
     Input Text  id:password  ${USUARIO_SENHA}
@@ -57,33 +56,15 @@ Esperar Elemento
 Cenário 1: Acessando o site da QAZANDO
     [Tags]  Teste1
     Acessar Site da qazando
-   
     Clicar sobre o botao de login
-
     Preencher campo email
-
     Preencher campo senha
-
     Clicar em logar
-
-
     Verificar texto login realizado
 
-# Cenário 2: Testando robot
-#     [Tags]  Teste2
-#     Acessar Site da google
-#     Aguardar site carregar 
-#     Clicar sobre o botao de login
-#     Aguardar site carregar
-#     Preencher campo email
-#     Preencher campo senha
-#     Aguardar site carregar
-#     Clicar em logar
-#     Aguardar site carregar
-#     Verificar texto login realizado
 
-Cenário 3: Testando valor no teste
-    [Tags]  Teste3
+Cenário 2: Testando valor no teste
+    [Tags]  Teste2
     Acessar esse site  https://automationpratice.com.br/ 
     Aguardar site carregar 
     Clicar sobre o botao de login
@@ -95,3 +76,17 @@ Cenário 3: Testando valor no teste
     Aguardar site carregar
     Verificar texto login realizado
 
+# Cenario de teste erro para testar a ferramenta
+
+# Cenário 3: Testando robot
+#     [Tags]  Teste3
+#     Acessar Site da google
+#     Aguardar site carregar 
+#     Clicar sobre o botao de login
+#     Aguardar site carregar
+#     Preencher campo email
+#     Preencher campo senha
+#     Aguardar site carregar
+#     Clicar em logar
+#     Aguardar site carregar
+#     Verificar texto login realizado
