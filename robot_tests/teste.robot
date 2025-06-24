@@ -1,14 +1,14 @@
 ** Settings **
 Library  SeleniumLibrary
 Library  BuiltIn
-Library  FakerLibrary  lacale=pt_Br 
+ 
 
 
 ** Variables **
 ${SITE_URL}  https://automationpratice.com.br/ 
 ${SITE_URL_GOOGLE}  https://google.com.br/ 
-${USUARIO_EMAIL}  FakerLibrary.Email
-${USUARIO_SENHA} 
+${USUARIO_EMAIL}  teste@teste.com
+${USUARIO_SENHA}  Teste123
 
 
 ** Keywords **
@@ -32,7 +32,7 @@ Clicar sobre o botao de login
     Click Element  xpath://a[@href='/login']
 
 Preencher campo email
-    Input Text  id:user  ${USUARIO_EMAIL}  FakerLibrary.Email
+    Input Text  id:user  ${USUARIO_EMAIL}  
 
 Preencher campo senha
     Input Text  id:password  ${USUARIO_SENHA}
@@ -65,15 +65,11 @@ Cenário 1: Acessando o site da QAZANDO
 
 Cenário 2: Testando valor no teste
     [Tags]  Teste2
-    Acessar esse site  https://automationpratice.com.br/ 
-    Aguardar site carregar 
+    Acessar esse site  https://automationpratice.com.br/
     Clicar sobre o botao de login
-    Aguardar site carregar
     Preencher campo email
     Preencher campo senha
-    Aguardar site carregar
     Clicar em logar
-    Aguardar site carregar
     Verificar texto login realizado
 
 # Cenario de teste erro para testar a ferramenta
