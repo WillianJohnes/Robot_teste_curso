@@ -28,3 +28,16 @@ robot -d results tests/
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate      # Windows
 ```
+👤 Sobre mim
+Willian Johnes Passos Leal, formado em Educação Física e atuando em QA.
+Curso QA Qazando com foco em testes manuais e automatizados.
+
+GitHub: github.com/WillianJohnes
+
+GitLab: gitlab.com/@willianpassos2014
+
+E-mail: willianpassos2014@outlook.com
+
+📜 Licença
+Projeto aberto para aprendizado e colaboração.
+
